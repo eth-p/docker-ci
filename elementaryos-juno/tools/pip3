@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+printf -- '%s\n' "$@" > "/install/list/pip3-$(printf "%q " "$@" | sha1sum | cut -d' ' -f1)"
+pip3 download -d "/var/cache/pip3/archives" -- "$@"
+exit $?
+

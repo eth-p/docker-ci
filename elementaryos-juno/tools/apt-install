@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+cat "/install/list"/apt-* |\
+	sort |\
+	uniq |\
+	DEBIAN_FRONTEND=noninteractive xargs apt-get install -y --
+exit $?
+

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+cat "/install/list"/pip3-* |\
+	sort |\
+	uniq |\
+	xargs pip3 install --no-index --find-links 'file:///var/cache/pip3/archives' --
+exit $?
+

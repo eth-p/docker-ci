@@ -32,4 +32,3 @@ My collection of Docker images for continuous integration.
 > - `libgranite-dev`
 > - `libgtk-3-dev`
 >
-

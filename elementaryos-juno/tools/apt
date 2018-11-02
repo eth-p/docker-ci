@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+printf -- '%s\n' "$@" > "/install/list/apt-$(printf "%q " "$@" | sha1sum | cut -d' ' -f1)"
+DEBIAN_FRONTEND=noninteractive apt-get -y install --download-only -- "$@"
+exit $?
+
