@@ -84,6 +84,7 @@ RUN /install/tool/apt make
 RUN /install/tool/apt cmake
 RUN /install/tool/apt autoconf
 RUN /install/tool/pip3 meson
+RUN /install/tool/pip3 ninja
 
 # -----------------------------------------------------------------------------
 # download_devtools:
